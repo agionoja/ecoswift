@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities{
+    .radial-gradient{
+   background-image: radial-gradient(58.4% 50.45% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)
+    }
+}
+
+@layer components{
+    .btn{
+        @apply px-4 py-2 md:px-8 md:py-3.5 bg-secondary text-white rounded-sm
+    }
+
+    .general-px {
+        @apply px-4 lg:px-28 md:px-12
+    }
+
+    .heading-2{
+        @apply text-2xl md:text-4xl font-semibold
+    }
+}
