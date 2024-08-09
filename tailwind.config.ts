@@ -8,6 +8,7 @@ export default {
         primary: "#004825",
         secondary: "#549877",
         "neutral-blue": "#010066",
+        "neutral-blue-100": "#B0B0D0",
       },
 
       borderRadius: {
@@ -16,6 +17,9 @@ export default {
 
       boxShadow: {
         lg: "0px 0px 5px 0px rgba(30, 30, 30, 0.10)",
+      },
+      maxWidth: {
+        "max-w-screen-3xl": "2304px",
       },
       backgroundImage: {
         "home-hero":

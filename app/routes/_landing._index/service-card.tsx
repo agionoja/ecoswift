@@ -10,11 +10,7 @@ export function ServiceCard({
   text: string;
 }) {
   return (
-    <div
-      className={
-        "p-4 rounded-lg flex flex-col gap-2 shadow-lg w-full md:w-[24rem]"
-      }
-    >
+    <div className={"p-4 rounded-lg flex flex-col gap-2 shadow-lg w-full"}>
       <img
         height={100}
         width={100}

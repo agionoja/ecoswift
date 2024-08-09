@@ -32,7 +32,7 @@ export function Hero({
       style={{
         backgroundImage: `radial-gradient(58.4% 50.45% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url(${bgUrl})`,
       }}
-      className={`bg-cover flex-col text-white flex bg-center gap-[4.375rem] bg-no-repeat h-[50vh] md:h-[604px] md:rounded-b-2xl`}
+      className={`flex-col text-white flex  bg-cover bg-center gap-[4.375rem] bg-no-repeat h-[55vh] md:h-[604px] md:rounded-b-2xl`}
     >
       <Header />
       <div
@@ -49,7 +49,7 @@ export function Hero({
                 <span>{callToAction}</span>
                 <img className={"shrink-0 grow-0"} src={icon} alt="" />
               </Link>
-              <Link to={"/contact"} className={"btn"}>
+              <Link to={"/contact"} className={"btn text-white bg-secondary"}>
                 Contact Us
               </Link>
             </div>

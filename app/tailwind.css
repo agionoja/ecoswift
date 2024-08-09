@@ -11,7 +11,11 @@
 
 @layer components{
     .btn{
-        @apply px-4 py-2 md:px-8 md:py-3.5 bg-secondary text-white rounded-sm
+        @apply px-4 py-2 md:px-8 md:py-3.5 rounded-sm
+    }
+
+    .btn-contact__blue-100{
+        @apply btn text-black bg-neutral-blue-100 w-fit
     }
 
     .general-px {
