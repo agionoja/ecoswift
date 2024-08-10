@@ -9,7 +9,9 @@ export function Footer() {
       }
     >
       <div>
-        <img src={logoWhite} alt="Economic Logo" />
+        <Link to={"/"}>
+          <img src={logoWhite} alt="Economic Logo" />
+        </Link>
       </div>
       <div className={"flex flex-col gap-8"}>
         <strong className={"opacity-40"}>INFO</strong>
