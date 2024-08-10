@@ -2,27 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .radial-gradient {
+    background-image: radial-gradient(
+      58.4% 50.45% at 50% 50%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
 
-@layer utilities{
-    .radial-gradient{
-   background-image: radial-gradient(58.4% 50.45% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)
-    }
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* WebKit-based browsers */
+  }
 }
 
-@layer components{
-    .btn{
-        @apply px-4 py-2 md:px-8 md:py-3.5 rounded-sm
-    }
+@layer components {
+  .btn {
+    @apply px-4 py-2 md:px-8 md:py-3.5 rounded-sm;
+  }
 
-    .btn-contact__blue-100{
-        @apply btn text-black bg-neutral-blue-100 w-fit
-    }
+  .btn-contact__blue-100 {
+    @apply btn text-black bg-neutral-blue-100 w-fit;
+  }
 
-    .general-px {
-        @apply px-4 lg:px-28 md:px-12
-    }
+  .general-px {
+    @apply px-4 lg:px-28 md:px-12;
+  }
 
-    .heading-2{
-        @apply text-2xl md:text-4xl font-semibold
-    }
+  .heading-2 {
+    @apply text-2xl md:text-4xl font-semibold;
+  }
 }

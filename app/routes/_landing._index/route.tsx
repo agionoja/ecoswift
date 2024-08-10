@@ -13,6 +13,9 @@ import { ChooseUsCardItem } from "~/routes/_landing._index/chooseUsCardItem";
 import { ChooseUsCard } from "~/routes/_landing._index/chooseUsCard";
 import { Partners } from "~/routes/_landing._index/partners";
 import { useEffect } from "react";
+import testimonialData from "~/routes/_landing._index/testimonialData";
+import { ComponentSlider } from "~/components/component-slider";
+import { TestimonialCard } from "~/routes/_landing._index/testimonialCard";
 
 export const meta: MetaFunction = () => {
   return [
@@ -100,6 +103,20 @@ export default function Index() {
         </ul>
       </ChooseUsCard>
       <Partners />
+      <div className="general-px py-10">
+        <ComponentSlider
+          components={testimonialData.map((tes, index) => (
+            <TestimonialCard
+              key={index}
+              name={tes.name}
+              rating={tes.rating}
+              imgUrl={tes.imgUrl}
+              date={tes.date}
+              review={tes.review}
+            />
+          ))}
+        />
+      </div>
     </div>
   );
 }
