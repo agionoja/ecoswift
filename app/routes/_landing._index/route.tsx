@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import testimonialData from "~/routes/_landing._index/testimonialData";
 import { ComponentSlider } from "~/components/component-slider";
 import { TestimonialCard } from "~/routes/_landing._index/testimonialCard";
+import { Title } from "~/components/title";
 
 export const meta: MetaFunction = () => {
   return [
@@ -103,7 +104,9 @@ export default function Index() {
         </ul>
       </ChooseUsCard>
       <Partners />
-      <div className="general-px py-10">
+      <div className="general-px py-10 flex flex-col gap-4 md:gap-8">
+        <Title title={"Testimonials"} />
+        <h2 className={"heading-2"}>What Our Clients Say About Us</h2>
         <ComponentSlider
           components={testimonialData.map((tes, index) => (
             <TestimonialCard
