@@ -22,7 +22,7 @@ export default function Contact() {
                 "text-center flex flex-col gap-4 items-center md:px-[20%]"
               }
             >
-              <Title title={"Contact Us"} />
+              {/*<Title title={"Contact Us"} />*/}
               <h1 className={"text-[40px] font-semibold"}>Get in Touch</h1>
               <p className={"md:text-[20px]"}>
                 Ready to start your design journey with Infisane? Contact us
