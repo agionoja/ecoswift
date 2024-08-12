@@ -13,7 +13,7 @@ export function ValueCard({
   return (
     <div
       className={
-        "shadow-lg text-center gap-4 p-10 w-full flex flex-col items-center"
+        "shadow-lg rounded-lg text-center gap-4 p-10 w-full flex flex-col items-center"
       }
     >
       <IconItem icon={icon} />

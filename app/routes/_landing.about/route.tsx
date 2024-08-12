@@ -57,7 +57,7 @@ export default function About() {
               }
             />
           }
-        />{" "}
+        />
         <Card
           imgUrl={visionIMg}
           component={
@@ -73,7 +73,7 @@ export default function About() {
         <div className={"flex flex-col gap-8"}>
           <Values />
           <ul
-            className={"flex w-full justify-between flex-wrap gap-4 md:gap-12p"}
+            className={"flex w-full justify-between flex-wrap gap-4 md:gap-12"}
           >
             {valuesData.map((value, index) => (
               <li key={index} className={"shrink-0  w-full md:w-[30%]"}>

@@ -9,6 +9,8 @@ export default {
         secondary: "#549877",
         "neutral-blue": "#010066",
         "neutral-blue-100": "#B0B0D0",
+        "transparent-gray-50": "rgba(255, 255, 255, 0.50)",
+        "transparent-gray-30": "rgba(255, 255, 255, 0.30)",
       },
 
       borderRadius: {
