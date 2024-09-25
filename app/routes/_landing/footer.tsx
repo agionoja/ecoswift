@@ -1,9 +1,7 @@
 import logoWhite from "~/assets/images/logo-white.svg";
 import { Link } from "@remix-run/react";
-import { FaFacebookSquare, FaWhatsapp, FaInstagram } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import favIcon from "../../../public/favicon.ico";
 
 export function Footer() {
   return (

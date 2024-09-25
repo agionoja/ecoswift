@@ -3,6 +3,7 @@ import { Footer } from "~/routes/_landing/footer";
 import iconPhone from "~/assets/images/icons-phone.svg";
 import iconEmail from "~/assets/images/icons-mail.svg";
 import { Form } from "@remix-run/react";
+import { useMaxScreen } from "~/hooks/useMaxScreen";
 
 export default function Contact() {
   return (
@@ -10,12 +11,12 @@ export default function Contact() {
       <div
         className={"md:min-h-screen w-full bg-cover bg-no-repeat bg-about-hero"}
       >
-        <div className="general-px w-full flex flex-col md:gap-20 pb-44">
+        <div className="general-px w-full flex flex-col gap-20 pb-44">
           <Header />
 
           <div
             className={
-              "md:border-4 md:rounded-4xl p-4 md:p-8 bg-transparent-gray-50 flex flex-col gap-8"
+              "border-2 rounded-2xl md:border-4 md:rounded-4xl p-4 md:p-8 bg-transparent-gray-50 flex flex-col gap-8"
             }
           >
             <div
@@ -26,11 +27,12 @@ export default function Contact() {
               {/*<Title title={"Contact Us"} />*/}
               <h1 className={"text-[40px] font-semibold"}>Get in Touch</h1>
               <p className={"md:text-[20px]"}>
-                Ready to start your design journey with Infisane? Contact us
-                today and let’s begin this creative adventure together.
+                Contact us today and experience seamless and secure shipping
               </p>
             </div>
-            <div className={"flex md:gap-16 flex-col w-full md:flex-row"}>
+            <div
+              className={"flex md:gap-16 flex-col-reverse w-full md:flex-row"}
+            >
               <Aside />
               <ContactForm />
             </div>
@@ -43,33 +45,45 @@ export default function Contact() {
 }
 
 function ContactForm() {
+  const sm = useMaxScreen(450);
+
   return (
-    <main className={"bg-transparent-gray-30 rounded-4xl w-full md:w-[65%]"}>
-      <Form className={"p-8 flex flex-col gap-3.5"}>
+    <main
+      className={
+        "bg-transparent-gray-30 rounded-2xl md:rounded-4xl w-full md:w-[65%]"
+      }
+    >
+      <Form className={"p-4 md:px-8 flex flex-col gap-3.5"}>
         <div className={"flex gap-2"}>
           <input
             type="text"
             name={"name"}
+            minLength={4}
+            required
             placeholder={"Your Name *"}
-            className={"bg-white w-full md:w-2/6 px-4 py-3"}
+            className={"input"}
           />
           <input
             type="email"
-            name={"name"}
+            required
+            name={"email"}
             placeholder={"Your Email *"}
-            className={"bg-white w-full md:w-2/6 px-4 py-3"}
+            className={"input"}
           />
           <input
             type="tel"
+            required
             name={"name"}
             placeholder={"Your Phone *"}
-            className={"bg-white w-full md:w-2/6 px-4 py-3"}
+            className={"input"}
           />
         </div>
         <textarea
+          required
+          minLength={30}
           placeholder={"Your Message"}
-          rows={8}
-          className={"w-full px-4 py-3"}
+          rows={!sm ? 10 : 4}
+          className={"w-full input"}
         />
         <button type={"submit"} className={"btn-contact__blue-100 ml-auto"}>
           Send Message
@@ -81,7 +95,11 @@ function ContactForm() {
 
 function Aside() {
   return (
-    <aside className={"md:w-[30%] rounded-4xl  p-8 bg-transparent-gray-30"}>
+    <aside
+      className={
+        "hidden md:w-[30%] text-xs md:text-lg md:block rounded-2xl md:rounded-4xl  p-2 md:p-8 bg-transparent-gray-30"
+      }
+    >
       <AsideItem
         icon={iconPhone}
         iconText={"Call To Us"}
@@ -117,7 +135,7 @@ function AsideItem({
   return (
     <div className={"flex flex-col gap-5"}>
       <div className={"flex gap-4"}>
-        <img src={icon} alt="Phone icon" />
+        <img width={30} className={"w-7 md:w-12"} src={icon} alt="Phone icon" />
         <strong>{iconText}</strong>
       </div>
       <p>{text}</p>
