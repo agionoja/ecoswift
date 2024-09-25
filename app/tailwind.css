@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer utilities {
   .radial-gradient {
     background-image: radial-gradient(
@@ -36,5 +42,9 @@
 
   .heading-2 {
     @apply text-2xl md:text-4xl font-semibold;
+  }
+
+  .socials {
+    @apply flex gap-3 items-center;
   }
 }

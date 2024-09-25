@@ -1,6 +1,5 @@
 import { Header } from "~/components/header";
 import { Footer } from "~/routes/_landing/footer";
-import { Title } from "~/components/title";
 import iconPhone from "~/assets/images/icons-phone.svg";
 import iconEmail from "~/assets/images/icons-mail.svg";
 import { Form } from "@remix-run/react";
@@ -8,8 +7,10 @@ import { Form } from "@remix-run/react";
 export default function Contact() {
   return (
     <div>
-      <div className={"md:min-h-screen bg-cover bg-no-repeat md:bg-about-hero"}>
-        <div className="general-px flex flex-col md:gap-20 pb-44">
+      <div
+        className={"md:min-h-screen w-full bg-cover bg-no-repeat bg-about-hero"}
+      >
+        <div className="general-px w-full flex flex-col md:gap-20 pb-44">
           <Header />
 
           <div
@@ -29,7 +30,7 @@ export default function Contact() {
                 today and let’s begin this creative adventure together.
               </p>
             </div>
-            <div className={"flex md:gap-16"}>
+            <div className={"flex md:gap-16 flex-col w-full md:flex-row"}>
               <Aside />
               <ContactForm />
             </div>
@@ -80,11 +81,7 @@ function ContactForm() {
 
 function Aside() {
   return (
-    <aside
-      className={
-        "hidden md:block md:w-[30%] rounded-4xl  p-8 bg-transparent-gray-30"
-      }
-    >
+    <aside className={"md:w-[30%] rounded-4xl  p-8 bg-transparent-gray-30"}>
       <AsideItem
         icon={iconPhone}
         iconText={"Call To Us"}
